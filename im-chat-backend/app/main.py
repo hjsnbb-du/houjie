@@ -60,7 +60,10 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
 @app.websocket("/ws/{room}")
 async def websocket_endpoint(websocket: WebSocket, room: str):
     try:
-        token = websocket.query_params.get("token")
+        token = websocket.headers.get("authorization", "").replace("Bearer ", "")
+        if not token:
+            token = websocket.query_params.get("token")
+
         if not token:
             await websocket.close(code=status.WS_1008_POLICY_VIOLATION)
             return
@@ -68,7 +71,8 @@ async def websocket_endpoint(websocket: WebSocket, room: str):
         try:
             user = await get_current_user(token)
             username = user["username"]
-        except:
+        except Exception as e:
+            print(f"Authentication error: {e}")
             await websocket.close(code=status.WS_1008_POLICY_VIOLATION)
             return
 

@@ -5,9 +5,10 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from typing import Optional
 from .models import User, UserCreate, users
+import os
 
 # Security configuration
-SECRET_KEY = "your-secret-key-keep-it-secret"  # In production, this should be in environment variables
+SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'your-secret-key-keep-it-secret')
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
