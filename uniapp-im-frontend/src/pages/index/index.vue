@@ -53,6 +53,11 @@ export default {
   methods: {
     async login() {
       try {
+        console.log('Attempting login with:', {
+          username: this.username,
+          password: '***'
+        });
+
         const response = await uni.request({
           url: `${this.API_URL}/token`,
           method: 'POST',
@@ -62,52 +67,149 @@ export default {
           data: `username=${encodeURIComponent(this.username)}&password=${encodeURIComponent(this.password)}`
         });
 
-        if (response.statusCode === 200) {
+        console.log('Login response:', {
+          statusCode: response.statusCode,
+          data: response.data
+        });
+
+        if (response.statusCode === 200 && response.data.access_token) {
           this.token = response.data.access_token;
           this.isLoggedIn = true;
-          this.connectWebSocket();
+          await this.connectWebSocket();
           uni.showToast({ title: '登录成功', icon: 'success' });
+        } else {
+          throw new Error('Invalid login response');
         }
       } catch (error) {
-        uni.showToast({ title: '登录失败', icon: 'none' });
+        console.error('Login error:', error);
+        uni.showToast({
+          title: '登录失败，请重试',
+          icon: 'none',
+          duration: 2000
+        });
+        this.isLoggedIn = false;
+        this.token = '';
       }
     },
 
     async register() {
       try {
+        // Input validation
+        if (!this.username || !this.password) {
+          uni.showToast({
+            title: '用户名和密码不能为空',
+            icon: 'none'
+          });
+          return;
+        }
+
+        console.log('Attempting registration with:', {
+          username: this.username,
+          password: '***'
+        });
+
         const response = await uni.request({
           url: `${this.API_URL}/register`,
           method: 'POST',
-          data: {
+          header: {
+            'Content-Type': 'application/json'
+          },
+          data: JSON.stringify({
             username: this.username,
             password: this.password
-          }
+          })
+        });
+
+        console.log('Registration response:', {
+          statusCode: response.statusCode,
+          data: response.data
         });
 
         if (response.statusCode === 200) {
           uni.showToast({ title: '注册成功', icon: 'success' });
+          await this.login(); // Automatically login after successful registration
+        } else {
+          const errorMsg = response.data?.detail || '注册失败';
+          console.error('Registration failed:', errorMsg);
+          uni.showToast({
+            title: errorMsg,
+            icon: 'none',
+            duration: 2000
+          });
         }
       } catch (error) {
-        uni.showToast({ title: '注册失败', icon: 'none' });
+        console.error('Registration error:', error);
+        uni.showToast({
+          title: '注册失败，请重试',
+          icon: 'none',
+          duration: 2000
+        });
       }
     },
 
     connectWebSocket() {
-      this.ws = uni.connectSocket({
-        url: `${this.WS_URL}/ws/general?token=${this.token}`,
-        success: () => {
-          console.log('WebSocket connected');
+      return new Promise((resolve, reject) => {
+        if (!this.token) {
+          console.error('No token available');
+          uni.showToast({
+            title: '未登录，请先登录',
+            icon: 'none'
+          });
+          this.isLoggedIn = false;
+          reject(new Error('No token available'));
+          return;
         }
-      });
 
-      this.ws.onMessage((res) => {
-        const message = JSON.parse(res.data);
-        this.messages.push(message);
-        this.scrollToBottom();
-      });
+        console.log('Connecting WebSocket with token:', this.token.substring(0, 10) + '...');
 
-      this.ws.onClose(() => {
-        setTimeout(() => this.connectWebSocket(), 1000);
+        this.ws = uni.connectSocket({
+          url: `${this.WS_URL}/ws/general?token=${this.token}`,
+          header: {
+            'Authorization': `Bearer ${this.token}`
+          },
+          complete: () => {
+            console.log('WebSocket connection attempt completed');
+          }
+        });
+
+        this.ws.onOpen(() => {
+          console.log('WebSocket connection opened successfully');
+          resolve();
+        });
+
+        this.ws.onError((error) => {
+          console.error('WebSocket error:', error);
+          this.isLoggedIn = false;
+          reject(error);
+        });
+
+        this.ws.onMessage((res) => {
+          try {
+            const message = JSON.parse(res.data);
+            this.messages.push(message);
+            this.scrollToBottom();
+          } catch (error) {
+            console.error('Error parsing message:', error);
+          }
+        });
+
+        this.ws.onClose((event) => {
+          console.log('WebSocket connection closed with code:', event.code);
+          // Only show reconnection message for unexpected closures
+          if (event.code !== 1000) {
+            uni.showToast({
+              title: '连接断开，正在重新连接',
+              icon: 'none',
+              duration: 1000
+            });
+            // Attempt immediate reconnection for voice chat
+            if (this.isLoggedIn) {
+              this.connectWebSocket().catch(error => {
+                console.error('Reconnection failed:', error);
+              });
+            }
+          }
+        });
       });
     },
 
