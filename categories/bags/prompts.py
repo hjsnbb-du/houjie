@@ -2,8 +2,11 @@
 Bag-specific prompt manager implementation.
 Handles prompts related to bag market analysis and trends.
 """
+import logging
 from typing import Dict
 from ..base import BasePromptManager
+
+logger = logging.getLogger(__name__)
 
 
 class BagPromptManager(BasePromptManager):
@@ -15,6 +18,7 @@ class BagPromptManager(BasePromptManager):
         Returns:
             Dict[str, str]: A dictionary of prompt identifiers to prompt text.
         """
+        logger.debug("Getting bag-specific prompts")
         return {
             "market_analysis": """请分析箱包市场的以下方面：
 1. 市场规模和增长趋势

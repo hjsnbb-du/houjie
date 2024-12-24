@@ -2,8 +2,11 @@
 Trendy toys-specific prompt manager implementation.
 Handles prompts related to toy market analysis and trends.
 """
+import logging
 from typing import Dict
 from ..base import BasePromptManager
+
+logger = logging.getLogger(__name__)
 
 
 class ToyPromptManager(BasePromptManager):
@@ -15,6 +18,7 @@ class ToyPromptManager(BasePromptManager):
         Returns:
             Dict[str, str]: A dictionary of prompt identifiers to prompt text.
         """
+        logger.debug("Getting trendy toys-specific prompts")
         return {
             "market_analysis": """请分析潮玩市场的以下方面：
 1. 市场规模和增长速度

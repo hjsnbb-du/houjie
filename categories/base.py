@@ -2,7 +2,10 @@
 Base class for category-specific prompt managers.
 This module defines the interface that all category prompt managers must implement.
 """
-from typing import Dict
+import logging
+from typing import Dict, List
+
+logger = logging.getLogger(__name__)
 
 
 class BasePromptManager:
@@ -19,6 +22,7 @@ class BasePromptManager:
             NotImplementedError: This is an abstract method that must be implemented
                                by concrete category managers.
         """
+        logger.debug("Base get_prompts called - should be implemented by subclass")
         raise NotImplementedError("Subclasses must implement get_prompts()")
     
     def get_name(self) -> str:
@@ -32,3 +36,25 @@ class BasePromptManager:
                                by concrete category managers.
         """
         raise NotImplementedError("Subclasses must implement get_name()")
+
+    def validate_prompts(self, required_keys: List[str]) -> bool:
+        """Validate that all required prompt keys are present.
+        
+        Args:
+            required_keys (List[str]): List of required prompt keys
+            
+        Returns:
+            bool: True if all required keys are present, False otherwise
+        """
+        try:
+            prompts = self.get_prompts()
+            missing_keys = [key for key in required_keys if key not in prompts]
+            
+            if missing_keys:
+                logger.warning(f"Missing required prompt keys in {self.__class__.__name__}: {missing_keys}")
+                return False
+                
+            return True
+        except Exception as e:
+            logger.error(f"Failed to validate prompts for {self.__class__.__name__}: {str(e)}")
+            return False

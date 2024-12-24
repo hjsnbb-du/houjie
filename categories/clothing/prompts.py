@@ -2,8 +2,11 @@
 Clothing-specific prompt manager implementation.
 Handles prompts related to clothing market analysis and trends.
 """
+import logging
 from typing import Dict
 from ..base import BasePromptManager
+
+logger = logging.getLogger(__name__)
 
 
 class ClothingPromptManager(BasePromptManager):
@@ -15,6 +18,7 @@ class ClothingPromptManager(BasePromptManager):
         Returns:
             Dict[str, str]: A dictionary of prompt identifiers to prompt text.
         """
+        logger.debug("Getting clothing-specific prompts")
         return {
             "market_analysis": """请分析服装市场的以下方面：
 1. 市场规模和增长预测
