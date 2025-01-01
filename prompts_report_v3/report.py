@@ -2,6 +2,7 @@ import os
 import logging
 from typing import List, Optional, Dict, Any
 from concurrent import futures
+from datetime import date
 from kimi import chat
 
 from categories.bags.prompts import BagPromptManager
@@ -58,6 +59,7 @@ if not os.path.exists(config_dir):
 try:
     with open(config_file, "r", encoding="utf-8") as f:
         templates = yaml.safe_load(f)
+        frontmatter_template = templates["frontmatter_template"]
         report_template = templates["report_template"]
         conclusion_template = templates["conclusion_template"]
         section_templates = templates["section_templates"]
@@ -91,6 +93,49 @@ except Exception as e:
         "channel_strategy": '\n## {level}渠道策略\n\n{response}\n\n---\n'
     }
 
+def normalize_text(text: str) -> str:
+    """Normalize text by removing extra whitespace and standardizing line breaks.
+    
+    Args:
+        text (str): Text to normalize
+        
+    Returns:
+        str: Normalized text with consistent formatting
+    """
+    # Replace Windows line endings with Unix style
+    text = text.replace('\r\n', '\n')
+    
+    # Split into lines and normalize
+    lines = []
+    in_list = False
+    
+    for line in text.splitlines():
+        # Preserve indentation for list items
+        if line.lstrip().startswith(('-', '*', '1.', '•')):
+            indent = len(line) - len(line.lstrip())
+            lines.append(' ' * indent + line.lstrip())
+            in_list = True
+        # Keep list item indentation for continuation lines
+        elif in_list and line.strip():
+            indent = len(line) - len(line.lstrip())
+            if indent >= 2:
+                lines.append(line)
+            else:
+                lines.append(line.strip())
+                in_list = False
+        # Handle section separators
+        elif line.strip() == '---':
+            lines.append('')
+            lines.append('---')
+            lines.append('')
+        # Normal lines
+        elif line.strip():
+            lines.append(line.strip())
+            in_list = False
+    
+    # Join with single newlines, ensuring proper spacing
+    return '\n'.join(lines)
+
 def coro_chat(params: Dict[str, Any]) -> str:
     """Generate response for a specific prompt using chat API.
     
@@ -98,13 +143,13 @@ def coro_chat(params: Dict[str, Any]) -> str:
         params (Dict[str, Any]): Dictionary containing topic and prompt
         
     Returns:
-        str: Generated response from chat API
+        str: Generated response from chat API with normalized formatting
     """
     try:
         logger.debug(f"Making chat API call for topic: {params['topic']}")
         response = chat(params["prompt"].format(topic=params["topic"]))
         logger.debug(f"Successfully received response for topic: {params['topic']}")
-        return response
+        return normalize_text(response)
     except Exception as e:
         logger.error(f"Chat API call failed for topic: {params['topic']}, error: {str(e)}")
         return "【Error: Failed to generate response】"
@@ -179,7 +224,14 @@ def report(topic: str, category: str, sections: Optional[List[str]] = None) -> s
     # Compose markdown content
     markdown_content = ""
     try:
-        markdown_content = report_template.format(topic=topic, category_name=category_name)
+        # Add YAML frontmatter
+        markdown_content = frontmatter_template.format(
+            topic=topic,
+            category_name=category_name,
+            current_date=date.today().isoformat()
+        )
+        # Add main report content
+        markdown_content += report_template.format(topic=topic, category_name=category_name)
         level_list = ['一、', '二、', '三、', '四、', '五、']
         
         # Generate sections with error handling
