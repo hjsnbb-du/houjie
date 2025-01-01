@@ -1,0 +1,148 @@
+2024-12-24 07:34:29,134 INFO Loading category manager for: trendy_toys
+2024-12-24 07:34:29,137 INFO Successfully loaded 潮玩 manager with 5 prompts
+2024-12-24 07:34:32,144 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:32,241 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:32,454 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:32,711 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:32,742 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:54,299 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:55,050 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:34:57,304 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:35:00,416 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:35:01,903 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-24 07:35:01,905 INFO Caching markdown content to cache/哈利波特_潮玩_cache.md
+2024-12-24 07:35:01,906 INFO Writing markdown content to 「哈利波特」潮玩市场分析报告.md
+2024-12-24 07:35:01,907 INFO Converting markdown to PDF: 「哈利波特」潮玩市场分析报告.pdf
+2024-12-24 07:35:02,629 ERROR PDF conversion failed with exit code: 16384
+2024-12-24 07:35:02,630 ERROR Failed to generate PDF report: PDF conversion failed
+2024-12-24 07:35:02,631 INFO Removed failed cache file: cache/哈利波特_潮玩_cache.md
+2024-12-31 23:17:41,893 INFO Loading category manager for: clothing
+2024-12-31 23:17:41,896 INFO Successfully loaded 服装 manager with 5 prompts
+2024-12-31 23:17:45,046 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:17:45,468 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:17:45,537 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:17:45,548 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:17:45,607 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:14,086 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:14,948 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:17,745 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:19,514 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:20,899 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-31 23:18:20,902 INFO Caching markdown content to cache/哈利波特_服装_cache.md
+2024-12-31 23:18:20,904 INFO Writing markdown content to 「哈利波特」服装市场分析报告.md
+2024-12-31 23:18:20,906 INFO Converting markdown to PDF: 「哈利波特」服装市场分析报告.pdf
+2024-12-31 23:18:22,896 INFO Successfully generated PDF report: 「哈利波特」服装市场分析报告.pdf
+2025-01-01 08:09:28,511 INFO Loading category manager for: bags
+2025-01-01 08:09:28,511 INFO Successfully loaded 箱包 manager with 8 prompts
+2025-01-01 08:09:32,538 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:32,567 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:32,606 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:32,622 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:32,655 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:32,678 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:09:59,101 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:03,291 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:05,263 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:08,460 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:09,189 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:14,643 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:19,852 INFO Loading category manager for: trendy_toys
+2025-01-01 08:10:19,852 INFO Successfully loaded 潮玩 manager with 8 prompts
+2025-01-01 08:10:23,577 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:23,585 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:23,592 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:23,630 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:23,694 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:23,783 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:30,625 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:49,295 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:49,298 INFO Writing markdown content to 「Hello Kitty」箱包市场分析报告.md
+2025-01-01 08:10:49,299 INFO Converting markdown to PDF: 「Hello Kitty」箱包市场分析报告.pdf
+2025-01-01 08:10:49,302 ERROR Failed to generate report: PDF conversion failed
+2025-01-01 08:10:52,365 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:10:59,339 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:00,192 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:01,870 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:02,613 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:10,240 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:22,827 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:30,123 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:11:30,126 INFO Writing markdown content to 「Hello Kitty」潮玩市场分析报告.md
+2025-01-01 08:11:30,128 INFO Converting markdown to PDF: 「Hello Kitty」潮玩市场分析报告.pdf
+2025-01-01 08:11:30,129 ERROR Failed to generate report: PDF conversion failed
+2025-01-01 08:16:03,910 INFO Loading category manager for: trendy_toys
+2025-01-01 08:16:03,910 INFO Successfully loaded 潮玩 manager with 8 prompts
+2025-01-01 08:16:06,874 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:06,959 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:06,969 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:07,086 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:07,334 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:07,612 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:37,541 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:38,772 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:40,475 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:40,617 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:44,949 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:16:51,648 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:17:12,883 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:17:13,796 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:17:13,800 INFO Writing markdown content to 「Hello Kitty」潮玩市场分析报告.md
+2025-01-01 08:17:13,801 INFO Converting markdown to PDF: 「Hello Kitty」潮玩市场分析报告.pdf
+2025-01-01 08:17:13,818 ERROR Failed to generate report: PDF conversion failed
+2025-01-01 08:18:38,041 INFO Loading category manager for: trendy_toys
+2025-01-01 08:18:38,042 INFO Successfully loaded 潮玩 manager with 8 prompts
+2025-01-01 08:18:40,860 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:18:40,877 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:18:41,244 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:18:41,369 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:18:41,752 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:18:41,857 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:10,896 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:13,157 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:17,324 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:18,798 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:21,876 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:39,199 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:43,395 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:50,408 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:19:50,411 INFO Writing markdown content to 「Hello Kitty」潮玩市场分析报告.md
+2025-01-01 08:19:50,412 INFO Converting markdown to PDF: 「Hello Kitty」潮玩市场分析报告.pdf
+2025-01-01 08:19:50,428 ERROR Failed to generate report: PDF conversion failed
+2025-01-01 08:23:57,960 INFO Loading category manager for: bags
+2025-01-01 08:23:57,960 INFO Successfully loaded 箱包 manager with 8 prompts
+2025-01-01 08:24:01,111 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:01,162 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:01,447 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:01,486 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:01,912 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:02,052 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:26,416 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:37,125 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:40,453 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:43,002 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:24:51,419 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:25:03,594 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:25:06,237 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:25:10,277 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:25:10,280 INFO Writing markdown content to 「Hello Kitty」箱包市场分析报告.md
+2025-01-01 08:25:10,281 INFO Converting markdown to PDF: 「Hello Kitty」箱包市场分析报告.pdf
+2025-01-01 08:25:10,297 ERROR Failed to generate report: PDF conversion failed
+2025-01-01 08:28:51,138 INFO Loading category manager for: bags
+2025-01-01 08:28:51,138 INFO Successfully loaded 箱包 manager with 8 prompts
+2025-01-01 08:28:53,961 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:28:54,215 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:28:54,355 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:28:54,388 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:28:54,496 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:28:55,080 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:17,496 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:19,836 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:26,493 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:26,815 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:28,495 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:36,298 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:39,032 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:50,931 INFO HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-01 08:29:50,933 INFO Writing markdown content to 「Hello Kitty」箱包市场分析报告.md
+2025-01-01 08:29:50,934 INFO Converting markdown to PDF: 「Hello Kitty」箱包市场分析报告.pdf
+2025-01-01 08:29:50,948 ERROR Failed to generate report: PDF conversion failed

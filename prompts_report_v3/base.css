@@ -1,0 +1,109 @@
+html {
+    font-size: 17px; /* 基础字体大小 */
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Noto Sans CJK SC", sans-serif; /* 指定正文字体 */
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400; /* 默认字体粗细 */
+}
+
+/* 标题样式，逐级递减，标题字体加粗 */
+h1 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 1.75em;
+    line-height: 1.3;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 1.5em;
+    line-height: 1.4;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h4 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h5 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h6 {
+    font-family: "Noto Sans CJK SC", sans-serif;
+    font-size: 1em;
+    line-height: 1.7;
+    color: #777;
+    font-weight: bold; /* 加粗 */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+/* 强调加粗文本 */
+strong, b {
+    font-weight: bold;
+    font-family: "Noto Sans CJK SC", sans-serif;
+}
+
+/* 等宽字体，适用于代码块，加粗显示 */
+code, pre {
+    font-family: "Noto Sans Mono CJK SC", monospace;
+    background-color: #f8f8f8;
+    border: 1px solid #e7eaed;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 0.9em;
+    font-weight: bold; /* 代码块加粗 */
+}
+
+/* 页面边距设置 */
+@page {
+    margin: 1in;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 合并边框 */
+    margin: 0.8em 0;
+}
+
+table, th, td {
+    border: 1px solid #dfe2e5; /* 设置边框颜色 */
+}
+
+th, td {
+    padding: 6px 13px; /* 调整单元格内边距 */
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8; /* 偶数行背景色 */
+}
