@@ -1,11 +1,29 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
 *.db
+venv/
+ENV/
+.env
+.python-version
+
 # Node
 node_modules/
 dist/
-.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+notes.txt
+.openai_chat_config.json
+.openai_chat_history.json
+
+# Logs
+*.log
