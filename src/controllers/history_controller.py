@@ -4,12 +4,12 @@ from pathlib import Path
 from typing import List, Optional
 
 from kivy.properties import ObjectProperty
-from kivymd.uix.screen import MDScreen
+from kivy.uix.screen import Screen
 
 from models.chat import Conversation
 from services.openai_service import OpenAIService
 
-class HistoryController(MDScreen):
+class HistoryController(Screen):
     """Controller for the history screen."""
     
     api_service: OpenAIService = ObjectProperty(None)
@@ -41,14 +41,24 @@ class HistoryController(MDScreen):
     
     def _add_conversation_item(self, conversation: Conversation):
         """Add a conversation item to the list."""
-        from kivymd.uix.card import MDCard
+        from kivy.uix.boxlayout import BoxLayout
+        from kivy.uix.behaviors import ButtonBehavior
         
-        item = MDCard(
+        class ConversationItem(ButtonBehavior, BoxLayout):
+            def __init__(self, **kwargs):
+                super().__init__(**kwargs)
+                self.orientation = 'vertical'
+                self.size_hint_y = None
+                self.height = '72dp'
+                self.padding = '12dp'
+                self.spacing = '4dp'
+        
+        item = ConversationItem(
             title=conversation.title,
             preview=conversation.preview,
-            timestamp=conversation.updated_at.strftime("%Y-%m-%d %H:%M"),
-            on_release=lambda x: self._open_conversation(conversation)
+            timestamp=conversation.updated_at.strftime("%Y-%m-%d %H:%M")
         )
+        item.bind(on_release=lambda x: self._open_conversation(conversation))
         self.ids.conversation_list.add_widget(item)
     
     def new_chat(self):

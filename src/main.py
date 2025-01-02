@@ -20,9 +20,9 @@ class ChatApp(App):
     def build(self):
         """Initialize and return the root widget."""
         # Load all kv files
-        Builder.load_file('views/settings.kv')
-        Builder.load_file('views/history.kv')
-        Builder.load_file('views/chat.kv')
+        Builder.load_file('src/views/settings.kv')
+        Builder.load_file('src/views/history.kv')
+        Builder.load_file('src/views/chat.kv')
         
         # Create screen manager
         sm = ScreenManager(transition=SlideTransition())

@@ -4,13 +4,12 @@ from typing import Optional
 
 from kivy.clock import Clock
 from kivy.properties import ObjectProperty
-from kivymd.uix.screen import MDScreen
-from kivymd.uix.snackbar import Snackbar
-
+from kivy.uix.screen import Screen
 from models.chat import Conversation, Message
+from utils.notifications import show_message
 from services.openai_service import OpenAIService
 
-class ChatController(MDScreen):
+class ChatController(Screen):
     """Controller for the chat screen."""
     
     api_service: OpenAIService = ObjectProperty(None)
@@ -39,14 +38,14 @@ class ChatController(MDScreen):
     
     def _add_message_bubble(self, message: Message):
         """Add a message bubble to the chat view."""
-        from kivymd.uix.card import MDCard
+        from kivy.uix.boxlayout import BoxLayout
         
-        bubble = MDCard(
+        bubble = BoxLayout(
             message=message.content,
             timestamp=message.timestamp.strftime("%H:%M"),
+            message_type=message.role,
             size_hint_x=0.8,
-            pos_hint={'right': 1} if message.role == 'user' else {'x': 0},
-            md_bg_color=(0.9, 0.9, 1, 1) if message.role == 'user' else (1, 1, 1, 1)
+            pos_hint={'right': 1} if message.role == 'user' else {'x': 0}
         )
         self.ids.message_list.add_widget(bubble)
         Clock.schedule_once(lambda dt: self._scroll_to_bottom())
@@ -54,7 +53,7 @@ class ChatController(MDScreen):
     async def send_message(self):
         """Send a message and get response from OpenAI."""
         if not self.current_conversation:
-            Snackbar(text="No active conversation").open()
+            show_message("No active conversation")
             return
         
         message_text = self.ids.message_input.text.strip()
@@ -82,7 +81,7 @@ class ChatController(MDScreen):
             )
             self._add_message_bubble(assistant_message)
         except Exception as e:
-            Snackbar(text=f"Error: {str(e)}").open()
+            show_message(f"Error: {str(e)}")
     
     def _scroll_to_bottom(self):
         """Scroll the chat view to the bottom."""

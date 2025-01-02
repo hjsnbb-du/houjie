@@ -5,12 +5,11 @@ from typing import Dict, Optional
 
 from kivy.clock import Clock
 from kivy.properties import ObjectProperty
-from kivymd.uix.screen import MDScreen
-from kivymd.uix.snackbar import Snackbar
-
+from kivy.uix.screen import Screen
 from services.openai_service import OpenAIService
+from utils.notifications import show_message
 
-class SettingsController(MDScreen):
+class SettingsController(Screen):
     """Controller for the settings screen."""
     
     api_service: OpenAIService = ObjectProperty(None)
@@ -43,10 +42,10 @@ class SettingsController(MDScreen):
                 base_url=config['base_url']
             )
             self._write_config(config)
-            Snackbar(text="Settings saved successfully").open()
+            show_message("Settings saved successfully")
             self.manager.current = 'history'
         except Exception as e:
-            Snackbar(text=f"Error saving settings: {str(e)}").open()
+            show_message(f"Error saving settings: {str(e)}")
     
     def test_connection(self):
         """Test the OpenAI API connection."""
@@ -56,11 +55,11 @@ class SettingsController(MDScreen):
                 base_url=self.ids.base_url.text
             )
             if self.api_service.test_connection():
-                Snackbar(text="Connection successful!").open()
+                show_message("Connection successful!")
             else:
-                Snackbar(text="Connection failed. Please check your settings.").open()
+                show_message("Connection failed. Please check your settings.")
         except Exception as e:
-            Snackbar(text=f"Connection error: {str(e)}").open()
+            show_message(f"Connection error: {str(e)}")
     
     def cancel(self):
         """Cancel settings changes and return to previous screen."""
