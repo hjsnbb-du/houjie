@@ -1,0 +1,74 @@
+#:kivy 2.2.1
+#:import MDCard kivymd.uix.card.MDCard
+#:import MDIconButton kivymd.uix.button.MDIconButton
+#:import MDTextField kivymd.uix.textfield.MDTextField
+
+<ConversationItem@MDCard>:
+    orientation: 'vertical'
+    padding: '8dp'
+    spacing: '4dp'
+    size_hint_y: None
+    height: '72dp'
+    elevation: 1
+    ripple_behavior: True
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: '8dp'
+
+        MDLabel:
+            id: title
+            text: root.title
+            font_style: 'Subtitle1'
+            size_hint_x: 0.7
+
+        MDLabel:
+            id: timestamp
+            text: root.timestamp
+            font_style: 'Caption'
+            size_hint_x: 0.3
+            halign: 'right'
+
+    MDLabel:
+        id: preview
+        text: root.preview
+        font_style: 'Caption'
+        size_hint_y: None
+        height: '20dp'
+        shorten: True
+        shorten_from: 'right'
+
+<HistoryScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '8dp'
+        padding: '8dp'
+
+        BoxLayout:
+            size_hint_y: None
+            height: '56dp'
+            spacing: '8dp'
+            padding: ['8dp', '0dp', '8dp', '0dp']
+
+            MDTextField:
+                id: search
+                hint_text: 'Search conversations...'
+                mode: "round"
+                icon_right: "magnify"
+                size_hint_x: 0.8
+
+            MDIconButton:
+                icon: 'plus'
+                on_release: root.new_chat()
+                size_hint_x: None
+                width: self.height
+
+        ScrollView:
+            do_scroll_x: False
+            
+            BoxLayout:
+                id: conversation_list
+                orientation: 'vertical'
+                spacing: '8dp'
+                size_hint_y: None
+                height: self.minimum_height

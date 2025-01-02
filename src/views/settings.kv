@@ -1,0 +1,81 @@
+#:kivy 2.2.1
+#:import MDTextField kivymd.uix.textfield.MDTextField
+#:import MDRaisedButton kivymd.uix.button.MDRaisedButton
+
+<SettingsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '16dp'
+        spacing: '8dp'
+
+        MDLabel:
+            text: 'Settings'
+            font_style: 'H5'
+            size_hint_y: None
+            height: '48dp'
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: '16dp'
+                padding: '8dp'
+
+                MDTextField:
+                    id: api_key
+                    hint_text: 'OpenAI API Key'
+                    helper_text: 'Enter your OpenAI API key'
+                    helper_text_mode: 'on_error'
+                    password: True
+                    size_hint_y: None
+                    height: '48dp'
+
+                MDTextField:
+                    id: base_url
+                    hint_text: 'API Base URL'
+                    text: 'https://api.openai.com/v1'
+                    helper_text: 'Enter API base URL'
+                    helper_text_mode: 'on_error'
+                    size_hint_y: None
+                    height: '48dp'
+
+                BoxLayout:
+                    size_hint_y: None
+                    height: '48dp'
+                    spacing: '8dp'
+
+                    MDLabel:
+                        text: 'Model'
+                        size_hint_x: None
+                        width: '100dp'
+
+                    Spinner:
+                        id: model_spinner
+                        text: 'gpt-3.5-turbo'
+                        values: ['gpt-3.5-turbo', 'gpt-4']
+                        size_hint_y: None
+                        height: '48dp'
+
+        BoxLayout:
+            size_hint_y: None
+            height: '48dp'
+            spacing: '8dp'
+            padding: ['8dp', '8dp', '8dp', '8dp']
+
+            MDRaisedButton:
+                text: 'Test Connection'
+                on_release: root.test_connection()
+
+            Widget:
+                size_hint_x: None
+                width: '16dp'
+
+            MDRaisedButton:
+                text: 'Save'
+                md_bg_color: app.theme_cls.primary_color
+                on_release: root.save_settings()
+
+            MDRaisedButton:
+                text: 'Cancel'
+                on_release: root.cancel()

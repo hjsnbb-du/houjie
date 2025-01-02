@@ -1,0 +1,76 @@
+#:kivy 2.2.1
+#:import MDTextField kivymd.uix.textfield.MDTextField
+#:import MDCard kivymd.uix.card.MDCard
+
+<MessageBubble@MDCard>:
+    padding: '12dp'
+    spacing: '4dp'
+    size_hint: None, None
+    size: self.minimum_size
+    elevation: 1
+    radius: [12, 12, 12, 12]
+    
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: None, None
+        size: self.minimum_size
+        padding: '4dp'
+        
+        MDLabel:
+            id: content
+            text: root.message
+            size_hint: None, None
+            size: self.texture_size
+            padding: '4dp', '4dp'
+            markup: True
+
+        MDLabel:
+            id: timestamp
+            text: root.timestamp
+            font_style: 'Caption'
+            size_hint: None, None
+            size: self.texture_size
+            halign: 'right'
+            theme_text_color: "Secondary"
+
+<ChatScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '8dp'
+
+        MDTopAppBar:
+            title: "Chat"
+            left_action_items: [["arrow-left", lambda x: root.go_back()]]
+            right_action_items: [["cog", lambda x: root.show_settings()]]
+            elevation: 2
+
+        ScrollView:
+            id: chat_scroll
+            do_scroll_x: False
+            
+            BoxLayout:
+                id: message_list
+                orientation: 'vertical'
+                spacing: '8dp'
+                size_hint_y: None
+                height: self.minimum_height
+                padding: '8dp'
+
+        BoxLayout:
+            size_hint_y: None
+            height: '64dp'
+            padding: '8dp'
+            spacing: '8dp'
+            md_bg_color: app.theme_cls.bg_light
+
+            MDTextField:
+                id: message_input
+                hint_text: "Type your message..."
+                multiline: False
+                size_hint_x: 0.85
+                on_text_validate: root.send_message()
+
+            MDIconButton:
+                icon: "send"
+                size_hint_x: 0.15
+                on_release: root.send_message()
