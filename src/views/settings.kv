@@ -1,0 +1,180 @@
+#:kivy 2.2.1
+
+<SettingsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '16dp'
+        spacing: '8dp'
+        canvas.before:
+            Color:
+                rgba: 0.98, 0.98, 0.98, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: 'Settings'
+            font_size: '24sp'
+            size_hint_y: None
+            height: '48dp'
+            color: 0.2, 0.2, 0.2, 1
+            bold: True
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: '16dp'
+                padding: '8dp'
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: '64dp'
+                    padding: '8dp'
+                    canvas.before:
+                        Color:
+                            rgba: 0.95, 0.95, 0.95, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [5]
+                    TextInput:
+                        id: api_key
+                        hint_text: 'OpenAI API Key'
+                        password: True
+                        size_hint_y: None
+                        height: '48dp'
+                        multiline: False
+                        padding: '10dp'
+                        background_color: 0, 0, 0, 0
+                        cursor_color: 0.3, 0.3, 0.3, 1
+                        foreground_color: 0.2, 0.2, 0.2, 1
+                    Label:
+                        text: 'Enter your OpenAI API key'
+                        color: 0.5, 0.5, 0.5, 1
+                        size_hint_y: None
+                        height: '16dp'
+                        font_size: '12sp'
+                        text_size: self.size
+                        halign: 'left'
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: '64dp'
+                    padding: '8dp'
+                    canvas.before: 
+                        Color:
+                            rgba: 0.95, 0.95, 0.95, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [5]
+                    TextInput:
+                        id: base_url
+                        hint_text: 'API Base URL'
+                        text: 'https://api.openai.com/v1'
+                        size_hint_y: None
+                        height: '48dp'
+                        multiline: False
+                        padding: '10dp'
+                        background_color: 0, 0, 0, 0
+                        cursor_color: 0.3, 0.3, 0.3, 1
+                        foreground_color: 0.2, 0.2, 0.2, 1
+                    Label:
+                        text: 'Enter API base URL'
+                        color: 0.5, 0.5, 0.5, 1
+                        size_hint_y: None
+                        height: '16dp'
+                        font_size: '12sp'
+                        text_size: self.size
+                        halign: 'left'
+
+                BoxLayout:
+                    size_hint_y: None
+                    height: '48dp'
+                    spacing: '8dp'
+                    padding: '8dp'
+                    canvas.before:
+                        Color:
+                            rgba: 0.95, 0.95, 0.95, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [5]
+
+                    Label:
+                        text: 'Model'
+                        size_hint_x: None
+                        width: '100dp'
+                        color: 0.2, 0.2, 0.2, 1
+
+                    Spinner:
+                        id: model_spinner
+                        text: 'gpt-3.5-turbo'
+                        values: ['gpt-3.5-turbo', 'gpt-4']
+                        size_hint_y: None
+                        height: '48dp'
+                        background_normal: ''
+                        background_color: 0.98, 0.98, 0.98, 1
+                        color: 0.2, 0.2, 0.2, 1
+
+        BoxLayout:
+            size_hint_y: None
+            height: '48dp'
+            spacing: '8dp'
+            padding: ['8dp', '8dp', '8dp', '8dp']
+
+            Button:
+                text: 'Test Connection'
+                on_release: root.test_connection()
+                background_normal: ''
+                background_color: 0.3, 0.6, 1, 1
+                color: 1, 1, 1, 1
+                size_hint_x: None
+                width: '120dp'
+                canvas.before:
+                    Color:
+                        rgba: 0.2, 0.5, 0.9, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [5]
+
+            Widget:
+                size_hint_x: None
+                width: '16dp'
+
+            Button:
+                text: 'Save'
+                background_normal: ''
+                background_color: 0.2, 0.7, 0.3, 1
+                color: 1, 1, 1, 1
+                size_hint_x: None
+                width: '100dp'
+                on_release: root.save_settings()
+                canvas.before:
+                    Color:
+                        rgba: 0.1, 0.6, 0.2, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [5]
+
+            Button:
+                text: 'Cancel'
+                background_normal: ''
+                background_color: 0.7, 0.7, 0.7, 1
+                color: 1, 1, 1, 1
+                size_hint_x: None
+                width: '100dp'
+                on_release: root.cancel()
+                canvas.before:
+                    Color:
+                        rgba: 0.6, 0.6, 0.6, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [5]

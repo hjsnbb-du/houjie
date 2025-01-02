@@ -1,0 +1,170 @@
+#:kivy 2.2.1
+
+<ConversationItem@BoxLayout>:
+    orientation: 'vertical'
+    padding: '12dp'
+    spacing: '4dp'
+    size_hint_y: None
+    height: '72dp'
+    canvas.before:
+        Color:
+            rgba: 0.98, 0.98, 0.98, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [8]
+        Color:
+            rgba: 0.9, 0.9, 0.9, 1
+        Line:
+            rounded_rectangle: [self.x, self.y, self.width, self.height, 8]
+            width: 1
+    canvas.after:
+        Color:
+            rgba: 0.95, 0.95, 0.95, 1 if self.state == 'normal' else (0.9, 0.9, 0.95, 1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [8]
+            
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '24dp'
+        spacing: '8dp'
+        
+        Label:
+            text: root.title
+            color: 0.2, 0.2, 0.2, 1
+            font_size: '16sp'
+            bold: True
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            shorten: True
+            shorten_from: 'right'
+            
+        Label:
+            text: root.timestamp
+            color: 0.5, 0.5, 0.5, 1
+            font_size: '12sp'
+            size_hint_x: None
+            width: '120dp'
+            text_size: self.size
+            halign: 'right'
+            valign: 'middle'
+    
+    Label:
+        text: root.preview
+        color: 0.3, 0.3, 0.3, 1
+        font_size: '14sp'
+        text_size: self.size
+        halign: 'left'
+        valign: 'top'
+        shorten: True
+        shorten_from: 'right'
+        max_lines: 2
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: '8dp'
+
+        Label:
+            id: title
+            text: root.title
+            font_size: '16sp'
+            size_hint_x: 0.7
+            color: 0.2, 0.2, 0.2, 1
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            bold: True
+
+        Label:
+            id: timestamp
+            text: root.timestamp
+            font_size: '12sp'
+            size_hint_x: 0.3
+            color: 0.5, 0.5, 0.5, 1
+            text_size: self.size
+            halign: 'right'
+            valign: 'middle'
+
+    Label:
+        id: preview
+        text: root.preview
+        font_size: '14sp'
+        size_hint_y: None
+        height: '20dp'
+        color: 0.3, 0.3, 0.3, 1
+        shorten: True
+        shorten_from: 'right'
+        text_size: self.size
+        halign: 'left'
+
+<HistoryScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '8dp'
+        padding: '8dp'
+        canvas.before:
+            Color:
+                rgba: 0.98, 0.98, 0.98, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            size_hint_y: None
+            height: '56dp'
+            spacing: '8dp'
+            padding: ['8dp', '0dp', '8dp', '0dp']
+
+            BoxLayout:
+                size_hint_x: 0.8
+                canvas.before:
+                    Color:
+                        rgba: 0.95, 0.95, 0.95, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [5]
+                TextInput:
+                    id: search
+                    hint_text: 'Search conversations...'
+                    multiline: False
+                    padding: '10dp'
+                    background_color: 0, 0, 0, 0
+                    cursor_color: 0.3, 0.3, 0.3, 1
+                    foreground_color: 0.2, 0.2, 0.2, 1
+
+            Button:
+                text: '\u2795'  # Heavy plus sign
+                font_size: '20sp'
+                on_release: root.new_chat()
+                size_hint_x: None
+                width: self.height
+                background_normal: ''
+                background_color: 0.2, 0.7, 0.3, 1
+                color: 1, 1, 1, 1
+                canvas.before:
+                    Color:
+                        rgba: 0.1, 0.6, 0.2, 1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [5]
+
+        ScrollView:
+            do_scroll_x: False
+            bar_width: '5dp'
+            bar_color: 0.7, 0.7, 0.7, 0.8
+            bar_inactive_color: 0.7, 0.7, 0.7, 0.4
+            effect_cls: 'ScrollEffect'
+            
+            BoxLayout:
+                id: conversation_list
+                orientation: 'vertical'
+                spacing: '8dp'
+                size_hint_y: None
+                height: self.minimum_height
+                padding: '4dp'
