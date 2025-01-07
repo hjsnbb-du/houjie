@@ -1,10 +1,25 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { ConfigProvider } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
+import { AuthProvider } from './contexts/AuthContext'
 import './index.css'
-import App from './App.tsx'
+import App from './App'
 
-createRoot(document.getElementById('root')!).render(
+const root = createRoot(document.getElementById('root')!)
+root.render(
   <StrictMode>
-    <App />
+    <ConfigProvider
+      locale={zhCN}
+      theme={{
+        token: {
+          colorPrimary: '#1677ff',
+        },
+      }}
+    >
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </ConfigProvider>
   </StrictMode>,
 )
