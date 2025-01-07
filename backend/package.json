@@ -1,0 +1,44 @@
+{
+  "name": "erp-backend",
+  "version": "1.0.0",
+  "description": "ERP System Backend with Egg.js and MySQL integration for authentication and business operations",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "egg": "^3.17.5",
+    "egg-cors": "^2.2.4",
+    "egg-jwt": "^3.1.7",
+    "egg-scripts": "2",
+    "egg-sequelize": "^6.0.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "egg-bin": "^5.19.0",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13",
+    "sequelize-cli": "^6.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-erp-backend",
+    "stop": "egg-scripts stop --title=egg-server-erp-backend",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "ERP System Team",
+  "license": "MIT"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "cluster-reload",
+  "version": "1.1.0",
+  "description": "cluster workers reload",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "egg-bin test",
+    "ci": "egg-bin cov"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "egg-bin": "^4.20.0",
+    "urllib": "^2.40.0"
+  },
+  "homepage": "https://github.com/node-modules/cluster-reload",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-modules/cluster-reload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/node-modules/cluster-reload/issues"
+  },
+  "keywords": [
+    "cluster-reload"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "ci": {
+    "version": "8, 10, 12, 14, 16, 18, 19",
+    "os": "linux"
+  },
+  "author": "fengmk2 <fengmk2@gmail.com> (https://github.com/fengmk2)",
+  "license": "MIT"
+}

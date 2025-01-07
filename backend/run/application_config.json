@@ -1,0 +1,645 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "logValue": true,
+      "overwrite": true,
+      "signed": true,
+      "autoCommit": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function v4>"
+    },
+    "security": {
+      "domainWhiteList": [
+        "http://172.16.5.2:4173",
+        "http://172.16.5.2:7004"
+      ],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "rotateWhenInvalid": false,
+        "supportedRequests": [
+          {
+            "path": {},
+            "methods": [
+              "POST",
+              "PATCH",
+              "DELETE",
+              "PUT",
+              "CONNECT"
+            ]
+          }
+        ],
+        "refererWhiteList": [],
+        "cookieOptions": {
+          "signed": false
+        }
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "ipExceptionList": null,
+        "hostnameExceptionList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/home/ubuntu/erp-backend/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/home/ubuntu/erp-backend/node_modules/egg-session/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-security/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-jsonp/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-onerror/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-watcher/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-schedule/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-development/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-static/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-view/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-cors/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-jwt/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg-sequelize/config/locales",
+        "/home/ubuntu/erp-backend/node_modules/egg/config/locales",
+        "/home/ubuntu/erp-backend/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/home/ubuntu/erp-backend/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/home/ubuntu/erp-backend/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "defaultParamCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null,
+      "allowArrayField": false,
+      "tmpdir": "/tmp/egg-multipart-tmp/erp-backend",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *",
+        "disable": false
+      },
+      "checkFile": "<Function anonymous>"
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/home/ubuntu/erp-backend/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "/home/ubuntu/erp-backend/app/view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS",
+      "credentials": true,
+      "hasCustomOriginHandler": true
+    },
+    "jwt": {
+      "secret": "<String len: 14>",
+      "enable": false
+    },
+    "sequelize": {
+      "dialect": "mysql",
+      "database": "erp_db",
+      "host": "localhost",
+      "port": 3306,
+      "username": "erp_user",
+      "password": "<String len: 12>",
+      "define": {
+        "timestamps": true,
+        "underscored": true
+      }
+    },
+    "env": "local",
+    "name": "erp-backend",
+    "keys": "<String len: 30>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "erp-backend",
+      "version": "1.0.0",
+      "description": "ERP System Backend with Egg.js and MySQL integration for authentication and business operations",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "bcrypt": "^5.1.1",
+        "egg": "^3.17.5",
+        "egg-cors": "^2.2.4",
+        "egg-jwt": "^3.1.7",
+        "egg-scripts": "2",
+        "egg-sequelize": "^6.0.0",
+        "mysql2": "^2.3.3"
+      },
+      "devDependencies": {
+        "egg-bin": "^5.19.0",
+        "egg-mock": "5",
+        "eslint": "8",
+        "eslint-config-egg": "13",
+        "sequelize-cli": "^6.6.2"
+      },
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-erp-backend",
+        "stop": "egg-scripts stop --title=egg-server-erp-backend",
+        "dev": "egg-bin dev",
+        "test": "npm run lint -- --fix && npm run test:local",
+        "test:local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "ERP System Team",
+      "license": "MIT"
+    },
+    "baseDir": "/home/ubuntu/erp-backend",
+    "HOME": "/home/ubuntu",
+    "rundir": "/home/ubuntu/erp-backend/run",
+    "dump": {
+      "ignore": "<Set>",
+      "timing": {
+        "slowBootActionMinDuration": 5000
+      }
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>",
+      "cacheControl": "public, max-age=2592000"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "/home/ubuntu/erp-backend/logs/erp-backend",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "erp-backend-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "enablePerformanceTimer": false,
+      "enableFastContextLogger": false,
+      "type": "application",
+      "localStorage": "<AsyncLocalStorage>"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "useHttpClientNext": false
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "cors",
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "eggLoaderTrace"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7003,
+        "hostname": "0.0.0.0"
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "middleware": [
+      "jwt",
+      "errorHandler"
+    ],
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-onerror",
+      "version": "2.4.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-session",
+      "version": "3.3.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-watcher",
+      "version": "3.1.1",
+      "dependents": [
+        "development"
+      ]
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-multipart",
+      "version": "3.4.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-security",
+      "version": "3.6.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-development",
+      "version": "3.0.2"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-logrotator",
+      "version": "3.2.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-schedule",
+      "version": "4.0.1",
+      "dependents": [
+        "logrotator"
+      ]
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-static",
+      "version": "2.3.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/node_modules/egg/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-view",
+      "version": "2.1.4"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-cors",
+      "version": "2.2.4"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-jwt",
+      "version": "3.1.7"
+    },
+    "sequelize": {
+      "enable": true,
+      "package": "egg-sequelize",
+      "name": "sequelize",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/home/ubuntu/erp-backend/config/plugin.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg-sequelize",
+      "version": "6.0.0"
+    }
+  },
+  "appInfo": {
+    "name": "erp-backend",
+    "baseDir": "/home/ubuntu/erp-backend",
+    "env": "local",
+    "scope": "",
+    "HOME": "/home/ubuntu",
+    "pkg": {
+      "name": "erp-backend",
+      "version": "1.0.0",
+      "description": "ERP System Backend with Egg.js and MySQL integration for authentication and business operations",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "bcrypt": "^5.1.1",
+        "egg": "^3.17.5",
+        "egg-cors": "^2.2.4",
+        "egg-jwt": "^3.1.7",
+        "egg-scripts": "2",
+        "egg-sequelize": "^6.0.0",
+        "mysql2": "^2.3.3"
+      },
+      "devDependencies": {
+        "egg-bin": "^5.19.0",
+        "egg-mock": "5",
+        "eslint": "8",
+        "eslint-config-egg": "13",
+        "sequelize-cli": "^6.6.2"
+      },
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-erp-backend",
+        "stop": "egg-scripts stop --title=egg-server-erp-backend",
+        "dev": "egg-bin dev",
+        "test": "npm run lint -- --fix && npm run test:local",
+        "test:local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "ERP System Team",
+      "license": "MIT"
+    },
+    "root": "/home/ubuntu/erp-backend"
+  }
+}

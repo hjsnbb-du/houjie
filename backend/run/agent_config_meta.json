@@ -1,0 +1,331 @@
+{
+  "keys": "/home/ubuntu/erp-backend/config/config.default.js",
+  "middleware": "/home/ubuntu/erp-backend/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "port": "/home/ubuntu/erp-backend/config/config.default.js",
+      "hostname": "/home/ubuntu/erp-backend/config/config.default.js",
+      "path": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "sequelize": {
+    "dialect": "/home/ubuntu/erp-backend/config/config.default.js",
+    "host": "/home/ubuntu/erp-backend/config/config.default.js",
+    "port": "/home/ubuntu/erp-backend/config/config.default.js",
+    "database": "/home/ubuntu/erp-backend/config/config.default.js",
+    "username": "/home/ubuntu/erp-backend/config/config.default.js",
+    "password": "/home/ubuntu/erp-backend/config/config.default.js",
+    "define": {
+      "timestamps": "/home/ubuntu/erp-backend/config/config.default.js",
+      "underscored": "/home/ubuntu/erp-backend/config/config.default.js"
+    }
+  },
+  "security": {
+    "csrf": {
+      "enable": "/home/ubuntu/erp-backend/config/config.default.js",
+      "type": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "useSession": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "headerName": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "queryName": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "rotateWhenInvalid": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "cookieOptions": {
+        "signed": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+      }
+    },
+    "domainWhiteList": "/home/ubuntu/erp-backend/config/config.default.js",
+    "protocolWhiteList": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "value": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "value": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "value": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "policy": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "hostnameExceptionList": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/home/ubuntu/erp-backend/config/config.default.js",
+    "allowMethods": "/home/ubuntu/erp-backend/config/config.default.js",
+    "credentials": "/home/ubuntu/erp-backend/config/config.default.js"
+  },
+  "jwt": {
+    "secret": "/home/ubuntu/erp-backend/config/config.default.js",
+    "enable": "/home/ubuntu/erp-backend/node_modules/egg-jwt/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/home/ubuntu/erp-backend/node_modules/egg-session/config/config.default.js",
+    "key": "/home/ubuntu/erp-backend/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/home/ubuntu/erp-backend/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/home/ubuntu/erp-backend/node_modules/egg-session/config/config.default.js",
+    "logValue": "/home/ubuntu/erp-backend/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/home/ubuntu/erp-backend/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/home/ubuntu/erp-backend/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/home/ubuntu/erp-backend/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/home/ubuntu/erp-backend/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/home/ubuntu/erp-backend/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/home/ubuntu/erp-backend/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/home/ubuntu/erp-backend/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/home/ubuntu/erp-backend/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/home/ubuntu/erp-backend/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/home/ubuntu/erp-backend/node_modules/egg-watcher/config/config.default.js",
+      "development": "/home/ubuntu/erp-backend/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/home/ubuntu/erp-backend/node_modules/egg-schedule/config/config.default.js",
+      "file": "/home/ubuntu/erp-backend/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/home/ubuntu/erp-backend/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "defaultParamCharset": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "files": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/home/ubuntu/erp-backend/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/home/ubuntu/erp-backend/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/home/ubuntu/erp-backend/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js",
+    "dir": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js",
+    "preload": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js",
+    "buffer": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/home/ubuntu/erp-backend/node_modules/egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/home/ubuntu/erp-backend/node_modules/egg-view/config/config.default.js",
+    "cache": "/home/ubuntu/erp-backend/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/home/ubuntu/erp-backend/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/home/ubuntu/erp-backend/node_modules/egg-view/config/config.default.js",
+    "mapping": "/home/ubuntu/erp-backend/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "name": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "cookies": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "proxy": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "version": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "description": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "private": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "egg": {
+      "declarations": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "bcrypt": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg-cors": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg-jwt": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "mysql2": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "egg-mock": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "eslint": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "sequelize-cli": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "stop": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "dev": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "test": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "test:local": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "cov": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "lint": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "ci": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "url": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "author": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "license": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "HOME": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "rundir": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "timing": {
+      "slowBootActionMinDuration": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "notFound": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "sitefile": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "middlewares": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "httpClient": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "cacheControl": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "encoding": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "formLimit": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "textLimit": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "strict": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "depth": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "encoding": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "env": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "level": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "outputJSON": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "buffer": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "appLogName": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "coreLogName": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "agentLogName": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "errorLogName": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/home/ubuntu/erp-backend/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "enableFastContextLogger": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+    },
+    "useHttpClientNext": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "meta": {
+    "enable": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "logging": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+  "clusterClient": {
+    "maxWaitTime": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/home/ubuntu/erp-backend/node_modules/egg/config/config.default.js"
+}

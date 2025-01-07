@@ -1,0 +1,17 @@
+2025-01-07 08:08:41,610 ERROR 55930 nodejs.SequelizeConnectionError: Access denied for user 'root'@'localhost'
+    at ConnectionManager.connect (/home/ubuntu/erp-backend/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:102:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ConnectionManager._connect (/home/ubuntu/erp-backend/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:222:24)
+    at async /home/ubuntu/erp-backend/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:174:32
+    at async ConnectionManager.getConnection (/home/ubuntu/erp-backend/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:197:7)
+    at async /home/ubuntu/erp-backend/node_modules/sequelize/lib/sequelize.js:305:26
+    at async Sequelize.authenticate (/home/ubuntu/erp-backend/node_modules/sequelize/lib/sequelize.js:457:5)
+    at async authenticate (/home/ubuntu/erp-backend/node_modules/egg-sequelize/lib/loader.js:134:7)
+    at async authenticate (/home/ubuntu/erp-backend/node_modules/egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/home/ubuntu/erp-backend/node_modules/egg-sequelize/lib/loader.js:142:7)
+name: "SequelizeConnectionError"
+parent: {"code":"ER_ACCESS_DENIED_NO_PASSWORD_ERROR","errno":1698,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost'"}
+original: {"code":"ER_ACCESS_DENIED_NO_PASSWORD_ERROR","errno":1698,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost'"}
+pid: 55930
+hostname: devin-box
+

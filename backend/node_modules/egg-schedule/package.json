@@ -1,0 +1,53 @@
+{
+  "name": "egg-schedule",
+  "version": "4.0.1",
+  "description": "schedule plugin for egg, support corn job.",
+  "eggPlugin": {
+    "name": "schedule"
+  },
+  "files": [
+    "app",
+    "lib",
+    "config",
+    "agent.js",
+    "app.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eggjs/egg-schedule.git"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "schedule",
+    "cron"
+  ],
+  "dependencies": {
+    "cron-parser": "^2.16.3",
+    "humanize-ms": "^1.2.1",
+    "is-type-of": "^1.2.1",
+    "safe-timers": "^1.1.0",
+    "utility": "^1.16.3"
+  },
+  "devDependencies": {
+    "egg": "^3.7.0",
+    "egg-bin": "^5.5.0",
+    "egg-mock": "^5.3.0",
+    "egg-tracer": "^1.1.0",
+    "eslint": "^8.29.0",
+    "eslint-config-egg": "^12.1.0"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && npm run cov"
+  },
+  "author": "dead_horse",
+  "license": "MIT"
+}

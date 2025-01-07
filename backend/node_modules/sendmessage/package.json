@@ -1,0 +1,45 @@
+{
+  "name": "sendmessage",
+  "version": "2.0.0",
+  "description": "Send a cross process message if message channel is connected.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha --exit -t 5000 test/*.test.js",
+    "ci": "c8 npm test",
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "c8": "^7.14.0",
+    "eslint": "^8.42.0",
+    "eslint-config-egg": "^12.2.1",
+    "mm": "^3.3.0",
+    "mocha": "^10.2.0",
+    "should": "*"
+  },
+  "homepage": "https://github.com/node-modules/sendmessage",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-modules/sendmessage.git",
+    "web": "https://github.com/node-modules/sendmessage"
+  },
+  "bugs": {
+    "url": "https://github.com/node-modules/sendmessage/issues",
+    "email": "fengmk2@gmail.com"
+  },
+  "keywords": [
+    "sendmessage",
+    "send",
+    "cluster",
+    "message",
+    "channel closed"
+  ],
+  "engines": {
+    "node": ">= 14.17.0"
+  },
+  "author": "fengmk2 <fengmk2@gmail.com> (https://github.com/fengmk2)",
+  "license": "MIT"
+}

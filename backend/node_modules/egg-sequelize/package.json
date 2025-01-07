@@ -1,0 +1,58 @@
+{
+  "name": "egg-sequelize",
+  "version": "6.0.0",
+  "description": "egg Sequelize plugin",
+  "eggPlugin": {
+    "name": "sequelize"
+  },
+  "keywords": [
+    "egg",
+    "sequelize",
+    "egg-plugin",
+    "eggPlugin",
+    "orm"
+  ],
+  "dependencies": {
+    "@types/sequelize": "^4.27.24",
+    "mz-modules": "^2.1.0",
+    "sequelize": "^6.0.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "^2.10.0",
+    "egg-bin": "^4.13.1",
+    "egg-mock": "^3.19.3",
+    "eslint": "^5.3.0",
+    "eslint-config-egg": "^7.0.0",
+    "mysql2": "^1.6.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "files": [
+    "app",
+    "config",
+    "agent.js",
+    "lib",
+    "app.js",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-sequelize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-sequelize#readme",
+  "author": "jtyjty99999",
+  "license": "MIT"
+}

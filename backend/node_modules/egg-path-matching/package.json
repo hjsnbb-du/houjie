@@ -1,0 +1,43 @@
+{
+  "name": "egg-path-matching",
+  "version": "1.1.0",
+  "description": "match or ignore url path",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint *.js test",
+    "ci": "npm run lint && npm run cov",
+    "contributor": "git-contributor"
+  },
+  "keywords": [
+    "url",
+    "match",
+    "ignore"
+  ],
+  "author": {
+    "name": "dead-horse",
+    "email": "dead_horse@qq.com",
+    "url": "http://deadhorse.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eggjs/egg-path-matching"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^1.7.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^6.5.2",
+    "eslint": "^8.55.0",
+    "eslint-config-egg": "^13.0.0",
+    "git-contributor": "^2.1.5"
+  },
+  "engine": {
+    "node": ">= 4.0.0"
+  }
+}

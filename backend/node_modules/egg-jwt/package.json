@@ -1,0 +1,64 @@
+{
+  "name": "egg-jwt",
+  "version": "3.1.7",
+  "description": "JWT authentication plugin for egg",
+  "eggPlugin": {
+    "name": "jwt",
+    "optionalDependencies": [
+      "onerror"
+    ]
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "jwt"
+  ],
+  "dependencies": {
+    "jsonwebtoken": "^8.3.0",
+    "koa-jwt2": "^1.0.3"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "^2.10.0",
+    "egg-bin": "^4.8.1",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.19.3",
+    "eslint": "^5.4.0",
+    "eslint-config-egg": "^7.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "files": [
+    "index.js",
+    "app.js",
+    "agent.js",
+    "index.d.ts",
+    "config",
+    "app",
+    "lib"
+  ],
+  "ci": {
+    "version": "8, 10, 12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okoala/egg-jwt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okoala/egg-jwt/issues"
+  },
+  "homepage": "https://github.com/okoala/egg-jwt#readme",
+  "author": "okoala <dapixp@gmail.com>",
+  "license": "MIT"
+}

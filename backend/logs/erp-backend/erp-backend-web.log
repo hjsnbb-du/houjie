@@ -1,0 +1,139 @@
+2025-01-07 09:50:32,642 INFO 19337 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 09:50:49,481 INFO 19337 [-/127.0.0.1/-/14ms GET /api/dashboard/stats] [egg-sequelize](2ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 09:56:55,582 INFO 27760 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 09:57:17,506 INFO 27760 [-/127.0.0.1/-/14ms GET /api/dashboard/stats] [egg-sequelize](2ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 09:58:53,462 INFO 32813 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 09:58:54,982 INFO 32813 [-/127.0.0.1/-/10ms GET /api/dashboard/stats] [egg-sequelize](2ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 09:58:54,994 INFO 32813 [-/127.0.0.1/-/2ms GET /api/dashboard/trends] [egg-sequelize](0ms) Executed (default): SELECT DATE(`createdAt`) AS `date`, COUNT('*') AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` BETWEEN '2024-12-08 09:58:54' AND '2025-01-07 09:58:54' GROUP BY DATE(`createdAt`);
+2025-01-07 10:02:05,627 INFO 34277 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:02:21,048 INFO 34277 [-/127.0.0.1/-/15ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:02:21,050 INFO 34277 [-/127.0.0.1/-/17ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed' AND `work_order`.`updated_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:02:21,051 INFO 34277 [-/127.0.0.1/-/18ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed';
+2025-01-07 10:02:21,052 INFO 34277 [-/127.0.0.1/-/19ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` != 'completed';
+2025-01-07 10:02:21,053 INFO 34277 [-/127.0.0.1/-/20ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer`;
+2025-01-07 10:02:21,054 INFO 34277 [-/127.0.0.1/-/21ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'active';
+2025-01-07 10:02:21,055 INFO 34277 [-/127.0.0.1/-/22ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'follow_up';
+2025-01-07 10:02:21,058 INFO 34277 [-/127.0.0.1/-/25ms GET /api/dashboard/stats] [egg-sequelize](2ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`expiryDate` < '2025-01-07 10:02:21';
+2025-01-07 10:02:21,071 INFO 34277 [-/127.0.0.1/-/3ms GET /api/dashboard/trends] [egg-sequelize](0ms) Executed (default): SELECT DATE(`createdAt`) AS `date`, COUNT('*') AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` BETWEEN '2024-12-08 10:02:21' AND '2025-01-07 10:02:21' GROUP BY DATE(`createdAt`);
+2025-01-07 10:03:06,796 INFO 34277 [-/127.0.0.1/-/5ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:03:06,797 INFO 34277 [-/127.0.0.1/-/6ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed' AND `work_order`.`updated_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:03:06,798 INFO 34277 [-/127.0.0.1/-/7ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed';
+2025-01-07 10:03:06,799 INFO 34277 [-/127.0.0.1/-/8ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` != 'completed';
+2025-01-07 10:03:06,801 INFO 34277 [-/127.0.0.1/-/10ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer`;
+2025-01-07 10:03:06,802 INFO 34277 [-/127.0.0.1/-/11ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'active';
+2025-01-07 10:03:06,802 INFO 34277 [-/127.0.0.1/-/11ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'follow_up';
+2025-01-07 10:03:06,804 INFO 34277 [-/127.0.0.1/-/13ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`expiryDate` < '2025-01-07 10:03:06';
+2025-01-07 10:03:06,812 INFO 34277 [-/127.0.0.1/-/1ms GET /api/dashboard/trends] [egg-sequelize](0ms) Executed (default): SELECT DATE(`createdAt`) AS `date`, COUNT('*') AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` BETWEEN '2024-12-08 10:03:06' AND '2025-01-07 10:03:06' GROUP BY DATE(`createdAt`);
+2025-01-07 10:03:44,672 INFO 35975 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:07:38,140 INFO 37583 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:07:55,600 INFO 37999 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:07:57,277 INFO 37999 [-/127.0.0.1/-/10ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:07:57,278 INFO 37999 [-/127.0.0.1/-/11ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed' AND `work_order`.`updated_at` >= '2025-01-07 00:00:00';
+2025-01-07 10:07:57,279 INFO 37999 [-/127.0.0.1/-/12ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` = 'completed';
+2025-01-07 10:07:57,280 INFO 37999 [-/127.0.0.1/-/13ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`status` != 'completed';
+2025-01-07 10:07:57,282 INFO 37999 [-/127.0.0.1/-/15ms GET /api/dashboard/stats] [egg-sequelize](1ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer`;
+2025-01-07 10:07:57,283 INFO 37999 [-/127.0.0.1/-/16ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'active';
+2025-01-07 10:07:57,284 INFO 37999 [-/127.0.0.1/-/17ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'follow_up';
+2025-01-07 10:07:57,285 INFO 37999 [-/127.0.0.1/-/18ms GET /api/dashboard/stats] [egg-sequelize](0ms) Executed (default): SELECT count(*) AS `count` FROM `customers` AS `customer` WHERE `customer`.`status` = 'expired';
+2025-01-07 10:07:57,298 INFO 37999 [-/127.0.0.1/-/3ms GET /api/dashboard/trends] [egg-sequelize](1ms) Executed (default): SELECT DATE(`created_at`) AS `date`, COUNT('*') AS `count` FROM `work_orders` AS `work_order` WHERE `work_order`.`created_at` BETWEEN '2024-12-08 10:07:57' AND '2025-01-07 10:07:57' GROUP BY DATE(`created_at`);
+2025-01-07 10:07:57,300 INFO 37999 [-/127.0.0.1/-/5ms GET /api/dashboard/trends] [egg-sequelize](0ms) Executed (default): SELECT DATE(`created_at`) AS `date`, COUNT('*') AS `count` FROM `customers` AS `customer` WHERE `customer`.`created_at` BETWEEN '2024-12-08 10:07:57' AND '2025-01-07 10:07:57' GROUP BY DATE(`created_at`);
+2025-01-07 10:21:37,983 INFO 48665 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:33:24,958 INFO 58444 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:33:24,958 INFO 58443 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:33:45,145 INFO 59378 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:48:04,252 INFO 71649 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:48:04,264 INFO 71648 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:48:05,159 INFO 71698 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:48:05,164 INFO 71704 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:48:23,125 INFO 72634 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 10:59:48,921 INFO 82094 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:12:44,725 INFO 93912 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:31:11,062 INFO 112786 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:36:01,915 INFO 116088 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:36:02,800 INFO 116113 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:36:21,490 INFO 117058 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:46:44,199 WARN 117058 [-/127.0.0.1/-/10ms POST /api/auth/login] nodejs.UnauthorizedError: Cannot read properties of undefined (reading 'findOne')
+    at Object.throw (/home/ubuntu/erp-backend/node_modules/koa/lib/context.js:97:11)
+    at AuthController.login (/home/ubuntu/erp-backend/app/controller/auth.js:43:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+message: "Cannot read properties of undefined (reading 'findOne')"
+pid: 117058
+hostname: devin-box
+
+2025-01-07 11:49:26,341 INFO 128769 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:49:44,441 INFO 129705 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:55:21,897 INFO 129705 [-/172.16.5.2/-/20ms POST /api/auth/register] [egg-sequelize](2ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser';
+2025-01-07 11:55:21,898 WARN 129705 [-/172.16.5.2/-/21ms POST /api/auth/register] nodejs.BadRequestError: Table 'erp_db.users' doesn't exist
+    at Object.throw (/home/ubuntu/erp-backend/node_modules/koa/lib/context.js:97:11)
+    at AuthController.register (/home/ubuntu/erp-backend/app/controller/auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async errorHandler (/home/ubuntu/erp-backend/app/middleware/error_handler.js:6:7)
+    at async /home/ubuntu/erp-backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:7:50
+    at async xframe (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/home/ubuntu/erp-backend/node_modules/koa-session/index.js:41:7)
+message: "Table 'erp_db.users' doesn't exist"
+pid: 129705
+hostname: devin-box
+
+2025-01-07 11:56:20,416 INFO 135653 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 11:57:34,069 INFO 135653 [-/172.16.5.2/-/19ms POST /api/auth/register] [egg-sequelize](2ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser';
+2025-01-07 11:57:34,140 INFO 135653 [-/172.16.5.2/-/90ms POST /api/auth/register] [egg-sequelize](4ms) Executed (default): INSERT INTO `users` (`id`,`username`,`password`,`email`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2025-01-07 11:57:34,319 INFO 135653 [-/172.16.5.2/-/3ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser';
+2025-01-07 11:58:24,968 INFO 138259 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:01:09,141 INFO 138259 [-/172.16.5.2/-/20ms POST /api/auth/register] [egg-sequelize](2ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser';
+2025-01-07 12:01:09,143 WARN 138259 [-/172.16.5.2/-/21ms POST /api/auth/register] nodejs.BadRequestError: Username already exists
+    at Object.throw (/home/ubuntu/erp-backend/node_modules/koa/lib/context.js:97:11)
+    at AuthController.register (/home/ubuntu/erp-backend/app/controller/auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async errorHandler (/home/ubuntu/erp-backend/app/middleware/error_handler.js:6:7)
+    at async /home/ubuntu/erp-backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:7:50
+    at async xframe (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/home/ubuntu/erp-backend/node_modules/koa-session/index.js:41:7)
+message: "Username already exists"
+pid: 138259
+hostname: devin-box
+
+2025-01-07 12:02:14,861 INFO 138259 [-/172.16.5.2/-/5ms POST /api/auth/register] [egg-sequelize](0ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser2';
+2025-01-07 12:02:14,931 INFO 138259 [-/172.16.5.2/-/75ms POST /api/auth/register] [egg-sequelize](4ms) Executed (default): INSERT INTO `users` (`id`,`username`,`password`,`email`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2025-01-07 12:02:15,149 INFO 138259 [-/172.16.5.2/-/2ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser2';
+2025-01-07 12:03:04,849 INFO 141497 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:03:23,937 INFO 142393 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:12:22,745 INFO 142393 [-/172.16.5.2/-/18ms POST /api/auth/register] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:12:22,814 INFO 142393 [-/172.16.5.2/-/87ms POST /api/auth/register] [egg-sequelize](4ms) Executed (default): INSERT INTO `users` (`id`,`username`,`password`,`email`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2025-01-07 12:12:23,075 INFO 142393 [-/172.16.5.2/-/3ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:13:44,621 INFO 142393 [-/172.16.5.2/-/4ms POST /api/auth/register] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser456';
+2025-01-07 12:13:44,683 INFO 142393 [-/172.16.5.2/-/66ms POST /api/auth/register] [egg-sequelize](3ms) Executed (default): INSERT INTO `users` (`id`,`username`,`password`,`email`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2025-01-07 12:13:44,839 INFO 142393 [-/172.16.5.2/-/2ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser456';
+2025-01-07 12:14:40,832 INFO 149716 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:14:58,065 INFO 150645 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:15:49,921 INFO 150645 [-/172.16.5.2/-/19ms POST /api/auth/login] [egg-sequelize](2ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:19:24,232 INFO 150645 [-/172.16.5.2/-/6ms POST /api/auth/login] [egg-sequelize](0ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:19:46,546 INFO 150645 [-/172.16.5.2/-/4ms POST /api/auth/login] [egg-sequelize](0ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:22:24,267 INFO 150645 [-/172.16.5.2/-/5ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:30:07,761 INFO 164410 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:36:46,141 INFO 170407 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2025-01-07 12:39:13,777 INFO 170407 [-/172.16.5.2/-/19ms POST /api/auth/register] [egg-sequelize](2ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser123';
+2025-01-07 12:39:13,779 WARN 170407 [-/172.16.5.2/-/21ms POST /api/auth/register] nodejs.BadRequestError: Username already exists
+    at Object.throw (/home/ubuntu/erp-backend/node_modules/koa/lib/context.js:97:11)
+    at AuthController.register (/home/ubuntu/erp-backend/app/controller/auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async errorHandler (/home/ubuntu/erp-backend/app/middleware/error_handler.js:6:7)
+    at async /home/ubuntu/erp-backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:7:50
+    at async xframe (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/home/ubuntu/erp-backend/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/home/ubuntu/erp-backend/node_modules/koa-session/index.js:41:7)
+message: "Username already exists"
+pid: 170407
+hostname: devin-box
+
+2025-01-07 12:39:58,438 INFO 170407 [-/172.16.5.2/-/5ms POST /api/auth/register] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser_1736253561';
+2025-01-07 12:39:58,505 INFO 170407 [-/172.16.5.2/-/72ms POST /api/auth/register] [egg-sequelize](4ms) Executed (default): INSERT INTO `users` (`id`,`username`,`password`,`email`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2025-01-07 12:39:58,723 INFO 170407 [-/172.16.5.2/-/2ms POST /api/auth/login] [egg-sequelize](1ms) Executed (default): SELECT `id`, `username`, `password`, `email`, `created_at`, `updated_at`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `users` AS `user` WHERE `user`.`username` = 'testuser_1736253561';

@@ -1,0 +1,51 @@
+{
+  "name": "egg-static",
+  "version": "2.3.1",
+  "description": "static server plugin for egg",
+  "eggPlugin": {
+    "name": "static"
+  },
+  "files": [
+    "app",
+    "config",
+    "app.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-static.git"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "static"
+  ],
+  "dependencies": {
+    "is-type-of": "^1.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-range": "^0.3.0",
+    "koa-static-cache": "^5.1.2",
+    "ylru": "^1.3.2"
+  },
+  "devDependencies": {
+    "egg": "3",
+    "egg-bin": "5",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "12",
+    "git-contributor": "2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && npm run cov",
+    "contributor": "git-contributor"
+  },
+  "author": "dead_horse",
+  "license": "MIT"
+}

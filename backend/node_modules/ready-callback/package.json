@@ -1,0 +1,43 @@
+{
+  "name": "ready-callback",
+  "version": "3.0.0",
+  "description": "Launch server after all async task ready",
+  "keywords": [
+    "koa",
+    "ready",
+    "async"
+  ],
+  "main": "lib/ready.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "dependencies": {
+    "debug": "^4.3.4",
+    "get-ready": "^2.0.1",
+    "once": "^1.4.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^5.9.0",
+    "eslint": "^8.31.0",
+    "eslint-config-egg": "^12.1.0",
+    "koa": "^1.2.4",
+    "spy": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-modules/ready-callback"
+  },
+  "homepage": "https://github.com/node-modules/ready-callback",
+  "author": "popomore <sakura9515@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && egg-bin cov"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
